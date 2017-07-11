@@ -16,6 +16,7 @@ public class Movimiento : MonoBehaviour {
 	private MeshRenderer mesh;
 	private float tiempo;
 
+
 	void Start () {
 		rigid=GetComponent<Rigidbody>();
 		activeTecho=false;
