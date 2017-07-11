@@ -9,8 +9,8 @@ public class SpawnObjetos : MonoBehaviour {
 	public float limiteX_inf;
 	public float limiteZ_sup;
 	public float limiteZ_inf;
-
-
+	public int cajaLimmite;
+	private int contadorCajas=0;
 	public float limiteY;
 	void Start () {
 
@@ -21,12 +21,13 @@ public class SpawnObjetos : MonoBehaviour {
 		tiempo+=Time.deltaTime;
 
 		//print("cajas "+);
-		if(tiempo>2.0f){
+		if(tiempo>2.0f&&contadorCajas<cajaLimmite){
 			int i=Random.Range(0,obj.Length);
 
 			Instantiate(obj[i],new Vector3(Random.Range(limiteX_inf,limiteX_sup),transform.position.y,Random.Range(limiteZ_inf,limiteZ_sup)),transform.rotation);
 			tiempo=0.0f;
-			print("entrando");
+			contadorCajas++;
+			print("entrando "+contadorCajas);
 
 		}		
 	}
