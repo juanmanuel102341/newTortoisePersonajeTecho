@@ -12,8 +12,9 @@ public class SpawnObjetos : MonoBehaviour {
 	public int cajaLimmite;
 	private int contadorCajas=0;
 	public float limiteY;
+	private Transform transform;
 	void Start () {
-
+		transform=GetComponent<Transform>();
 	}
 	
 	// Update is called once per frame
