@@ -40,7 +40,7 @@ public class Movimiento : MonoBehaviour {
 		}
 
 
-		if(Input.GetKey(KeyCode.W)&&transform.position.x<50&&transform.position.x>-48){
+		if(Input.GetKey(KeyCode.W)){
 			
 
 			rigid.transform.Translate(Vector3.forward*velocidad*Time.deltaTime);
@@ -59,7 +59,7 @@ public class Movimiento : MonoBehaviour {
 				}
 			
 			}
-		}else if(Input.GetKey(KeyCode.S)&&transform.position.x<50&&transform.position.x>-48){
+		}else if(Input.GetKey(KeyCode.S)){
 			rigid.transform.Translate(Vector3.back*velocidad*Time.deltaTime);
 			RaycastHit rayo;
 			if(Physics.Raycast(transform.position,Vector3.up,out rayo)){
